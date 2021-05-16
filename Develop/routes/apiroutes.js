@@ -38,15 +38,15 @@ module.exports = (app) => {
 
       fs.writeFile('./db/db.json', JSON.stringify(notesTaken), err =>{
         if(err) throw err;
-        console.log(done)
+        console.log('done')
       });
       return res.json(notesTaken)
     });
   
     // I added this below code so you could clear out the table while working with the functionality.
     // Don"t worry about it!
-    app.delete('api/notes/:id', (req, res) =>{
-      const notes = JSON.parse(fs.readFileSync('.db/db.json')) || [];
+    app.delete('/api/notes/:id', (req, res) =>{
+      const notes = JSON.parse(fs.readFileSync('./db/db.json')) || [];
       const noteId = req.params.id;
       for (var i = 0; i < notes.length; i++){
         if (noteId === notes[i].id) {
@@ -55,7 +55,7 @@ module.exports = (app) => {
       }
       fs.writeFile('./db/db.json', JSON.stringify(notes), err =>{
         if(err) throw err;
-        console.log(done)
+        console.log('done')
       });
       res.json(notes)
     })

@@ -10,5 +10,10 @@ the infomation will then be saved on the left side for esay access
 
 when the note is no longer needed the user can delete it by press the trash can 
 
-beside the desired note or notes    
+beside the desired note or notes.
+
+
+![app running in localhost](./assets/notetaker1.png)
+![app running in localhost](./assets/notetaker2.png)
+![app running in localhost](./assets/notetaker3.png)
 
